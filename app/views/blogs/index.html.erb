@@ -1,0 +1,23 @@
+<body class="gif">
+  <div style="background: transparent; width: 90%;  margin:0 auto">
+    <div>
+      <h1 style="color: white;">Blogs</h1>
+      <a class="btn btn-primary btn-lg text-light" href="/blogs/new" role="button">Crear un nuevo blog</a>
+    </div>
+    <p></p>
+    <p></p>
+    <% @blogs.each do |blog| %>
+      <div class="card" style="width: fill;">
+        <img class="card-img-top" src=<%= blog.body %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= blog.title %></h5>
+          <p class="card-text"><%= blog.body %></p>
+          <a href="#" class="btn btn-primary"><%= link_to 'Show', blog %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Edit', edit_blog_path(blog) %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        </div>
+      </div>
+      <p></p>
+    <% end %>
+  </div>
+</body>

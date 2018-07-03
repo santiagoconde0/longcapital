@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Longboard Capital</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 90%; margin:0 auto ">
+      <a class="navbar-brand" href="/">Longboard Capital</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/posts">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/blogs">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/crews">Crew</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/videos">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/">Ranking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/">Spots</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

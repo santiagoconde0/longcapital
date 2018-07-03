@@ -1,0 +1,24 @@
+<body class="gif">
+  <div style="background: transparent; width: 90%;  margin:0 auto">
+    <div>
+      <h1 style="color: white;">Events</h1>
+      <a class="btn btn-primary btn-lg text-light" href="/events/new" role="button">Post a Event</a>
+    </div>
+    <p></p>
+    <p></p>
+    <% @events.each do |event| %>
+      <div class="card" style="width: fill;">
+        <img class="card-img-top" src=<%= event.photo %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.title %></h5>
+          <p class="card-text"><%= event.body %></p>
+          <p class="card-text"><%= event.ref %></p>
+          <a href="#" class="btn btn-primary"><%= link_to 'Show', event %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        </div>
+      </div>
+      <p></p>
+    <% end %>
+  </div>
+</body>

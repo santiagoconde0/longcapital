@@ -1,0 +1,23 @@
+<body class="gif">
+  <div style="background: transparent; width: 90%;  margin:0 auto">
+    <div>
+      <h1 style="color: white;">Crew</h1>
+      <a class="btn btn-primary btn-lg text-light" href="/crews/new" role="button">Ingresar un nuevo miembro al crew</a>
+    </div>
+    <p></p>
+    <p></p>
+    <% @crews.each do |crew| %>
+      <div class="card" style="width: fill;">
+        <img class="card-img-top" src=<%= crew.photo %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= crew.name %></h5>
+          <p class="card-text"><%= crew.bio %></p>
+          <a href="#" class="btn btn-primary"><%= link_to 'Show', crew %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Edit', edit_crew_path(crew) %></a>
+          <a href="#" class="btn btn-primary"><%= link_to 'Destroy', crew, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        </div>
+      </div>
+      <p></p>
+    <% end %>
+  </div>
+</body>
